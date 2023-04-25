@@ -1,0 +1,186 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    height: 80vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(to top, hsl(240, 73%, 65%), hsl(273, 75%, 66%));
+    
+}
+
+.box {
+    width: 950px;
+    height: 500px;
+    margin: auto;
+    margin-top: 182px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 50px;
+}
+
+.illustrations {
+    position: relative;
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.illustration {
+    position: absolute;
+    top: 40%;
+    right: 95%;
+    z-index: 1;
+    
+}
+
+.illustration-woman {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+
+}
+
+.faq-box {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+details summary {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    border-bottom: 1px solid hsla(240, 6%, 50%, 0.6);
+}
+
+details summary:hover {
+    color: hsl(41, 95%, 51%);
+}
+  
+details summary::after {
+    content: "";
+    display: inline-block;
+    width: 0.9em;
+    height: 0.6em;
+    background-image: url(./images/icon-arrow-down.svg);
+    background-size: cover;
+    margin-left: 0.5em;    
+}
+  
+details[open] summary::after {
+    transform: rotate(180deg);
+    
+}
+
+details[open] summary{
+    font-weight: 700;
+    border: none;
+    
+}
+
+.question {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.answer {
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(240, 6%, 50%);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-bottom: 1px solid hsla(240, 6%, 50%, 0.6);
+}  
+  
+
+.attribution { 
+    margin-top: 50px;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(0, 0%, 89%); 
+}
+
+@media (max-width: 950px) {
+
+    body {
+        height: 80vh;
+    }
+    
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 350px;
+        height: 550px;
+    }
+
+    .illustration-woman {
+        width: 300px;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+
+    .illustration {
+        width: 110px;
+        position: absolute;
+        top: 0%;
+        right: 80%;
+        z-index: 1; 
+    }
+
+    .faq-box {
+        width: 330px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .answer {
+        font-size: 14px;
+    }
+
+    .question {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+}
